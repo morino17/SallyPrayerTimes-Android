@@ -64,45 +64,4 @@
         <item>@string/nothing</item>
     </string-array>
     
-      
-      
-      
-      
-      
-      
-      	<string-array name="state_names">
-
-		<item>Arak</item>
-		<item>Ardabil</item>
-		<item>Orumiyeh</item>
-		<item>Esfehan</item>
-		<item>Ahvaz</item>
-		<item>Ilam</item>
-		<item>Bojnurd</item>
-		<item>Bandar Abbas</item>
-		<item>Bushehr</item>
-		<item>Birjand</item>
-		<item>Tabriz</item>
-		<item>Tehran</item>
-		<item>Khoram Abad</item>
-		<item>Rasht</item>
-		<item>Zahedan</item>
-		<item>Zanjan</item>
-		<item>Sari</item>
-		<item>Semnan</item>
-		<item>Sanandaj</item>
-		<item>Shahr-e-kord</item>
-		<item>Shiraz</item>
-		<item>Ghazvin</item>
-		<item>Qom</item>
-		<item>Karaj</item>
-		<item>Kerman</item>
-		<item>Kermanshah</item>
-		<item>Gorgan</item>
-		<item>Mashhad</item>
-		<item>Hamedan</item>
-		<item>Yasuj</item>
-		<item>Yazd</item>
-	</string-array>
-    
 </resources>

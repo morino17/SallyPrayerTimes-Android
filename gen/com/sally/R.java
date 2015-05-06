@@ -18,7 +18,6 @@ public final class R {
         public static final int calculationMethod_array=0x7f070000;
         public static final int language_array=0x7f070005;
         public static final int mazhab_array=0x7f070001;
-        public static final int state_names=0x7f070007;
         public static final int time12or24_array=0x7f070003;
         public static final int typeTime_array=0x7f070002;
     }

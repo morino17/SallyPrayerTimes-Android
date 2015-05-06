@@ -34,6 +34,7 @@ import com.sally.R;
 
 public class HijriTime {
 
+	private Calendar calendar;//Calendar object
     private int day;//actual day
     private int month;//actual month
     private int year;//actual year
@@ -41,34 +42,19 @@ public class HijriTime {
     private DecimalFormat yearFormatter;//year formatter
     private Context context;
     
-    public HijriTime(Calendar calendar , Context context) throws IOException{
+    public HijriTime(Calendar cal , Context context) throws IOException{
+    	this.calendar = cal;
     	this.context = context;
-    	this.month = calendar.get(Calendar.MONTH) + 1;
-        this.year = calendar.get(Calendar.YEAR);
+
         try{
-        this.day = calendar.get(Calendar.DAY_OF_MONTH) + (int)Double.parseDouble(UserConfig.getSingleton().getHijri());
+        this.calendar.add(Calendar.DAY_OF_MONTH, (int)Double.parseDouble(UserConfig.getSingleton().getHijri()));
         }catch(Exception e){
-        	this.day = calendar.get(Calendar.DAY_OF_MONTH);
+        	this.calendar = cal;
         }
         
-        if(day > calendar.getMaximum(Calendar.DAY_OF_MONTH)){
-        	day = day - calendar.getMaximum(Calendar.DAY_OF_MONTH);
-        	month = month + 1 ; 
-        	if(month > 12){
-        		year = year + 1 ;
-        		month = 1;
-        	}
-        }
-        if(day < 1){
-        	calendar.set(Calendar.YEAR, year - 1);
-        	calendar.set(Calendar.MONTH, month - 1);
-        	day = calendar.getMaximum(Calendar.DAY_OF_MONTH) + day;
-        	month = month - 1 ; 
-        	if(month < 1){
-        		year = year -1 ;
-        		month = 12;
-        	}
-        }
+        this.day = calendar.get(Calendar.DAY_OF_MONTH);
+    	this.month = calendar.get(Calendar.MONTH) + 1;
+        this.year = calendar.get(Calendar.YEAR);
     }
     
     public String getMonth(int i){//get translated month name
